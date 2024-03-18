@@ -61,15 +61,6 @@ contract LiaoToken is IERC20 {
 
     function transfer(address to, uint256 amount) external returns (bool) {
         // TODO: please add your implementaiton here
-<<<<<<< HEAD
-        require(_balances[msg.sender] >= amount, "Insufficient balance");
-
-        _balances[msg.sender] -= amount;
-        _balances[to] += amount;
-        
-        emit Transfer(msg.sender, to, amount);
-    
-=======
         require(_balances[msg.sender] >= amount, "Insufficient balance!!!");
 
         _balances[msg.sender] -= amount;
@@ -77,7 +68,6 @@ contract LiaoToken is IERC20 {
 
         emit Transfer(msg.sender, to, amount);
 
->>>>>>> 45e7b8b (update: HW1_LiaoToken update)
         return true;
     }
 
